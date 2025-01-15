@@ -10,7 +10,6 @@ export const InputAnswers = ({
 				placeholder='Treść odpowiedzi'
 				value={answer.answer} // Poprawne wiązanie pola tekstowego
 				onChange={e => handleAnswerTextChange(index, e.target.value)}
-				required
 			/>
 			<label>
 				<input

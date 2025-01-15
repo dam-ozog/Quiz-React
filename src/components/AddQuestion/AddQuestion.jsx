@@ -72,6 +72,7 @@ const AddQuestion = ({ fetchQuestions }) => {
 								type='text'
 								value={questionText}
 								onChange={e => setQuestionText(e.target.value)}
+								required
 							/>
 						</div>
 						<h4>Odpowiedzi</h4>

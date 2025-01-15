@@ -104,23 +104,6 @@
           "value": false
         }
       ]
-    },
-    {
-      "question": "W co gramy?",
-      "answers": [
-        {
-          "answer": "CS",
-          "value": true
-        },
-        {
-          "answer": "LOL",
-          "value": true
-        },
-        {
-          "answer": "DOTA",
-          "value": true
-        }
-      ]
     }
   ]
 }

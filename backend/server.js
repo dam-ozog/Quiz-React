@@ -71,7 +71,7 @@ import path from "path";
 
 const app = express();
 const PORT = 5000;
-const DB_PATH = path.resolve("db.json"); // Ścieżka do pliku db.json
+const DB_PATH = path.resolve("./backend/db.json"); // Ścieżka do pliku db.json
 
 app.use(cors());
 app.use(express.json());
