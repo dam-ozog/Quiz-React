@@ -70,7 +70,7 @@ import fs from "fs";
 import path from "path";
 
 const app = express();
-const PORT = 5000;
+const PORT = 5000 || process.env.PORT;
 const DB_PATH = path.resolve("./backend/db.json"); // Ścieżka do pliku db.json
 
 app.use(cors());
@@ -136,7 +136,8 @@ app.delete("/questions", (req, res) => {
     if (index < 0 || index >= questions.length) {
         return res.status(404).json({ error: "Question not found" });
     }
-    const questionDelete = questions.filter(q => q.index === index)
+    // const questionDelete = questions.filter(q => q.index === index)
+    const questionDelete = questions[index];
 
     questions.splice(index, 1);
     writeDataToFile(questions);
@@ -146,10 +147,11 @@ app.delete("/questions", (req, res) => {
     res.status(200).json({ message: "Question deleted" });
 });
 
+export default app;
 
-  
-
-app.listen(PORT, () => {
-    console.log(`Backend server is running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== "production") {
+    app.listen(PORT, () => {
+        console.log(`Backend server is running on http://localhost:${PORT}`);
+    });
+}
 

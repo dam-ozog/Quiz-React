@@ -72,23 +72,6 @@
       ]
     },
     {
-      "question": "Ile kół ma rower?",
-      "answers": [
-        {
-          "answer": "3",
-          "value": false
-        },
-        {
-          "answer": "2",
-          "value": true
-        },
-        {
-          "answer": "12",
-          "value": false
-        }
-      ]
-    },
-    {
       "question": "Ile dni ma rok?",
       "answers": [
         {
