@@ -17,7 +17,7 @@ export const DeleteQuestion = ({ fetchQuestions }) => {
 			return;
 		}
 
-		const response = await fetch(`http://localhost:5000/questions`, {
+		const response = await fetch(`http://localhost:5000/api/questions`, {
 			method: "DELETE",
 			headers: {
 				"Content-Type": "application/json",

@@ -70,23 +70,6 @@
           "value": false
         }
       ]
-    },
-    {
-      "question": "Ile dni ma rok?",
-      "answers": [
-        {
-          "answer": "365",
-          "value": true
-        },
-        {
-          "answer": "260",
-          "value": false
-        },
-        {
-          "answer": "420",
-          "value": false
-        }
-      ]
     }
   ]
 }
