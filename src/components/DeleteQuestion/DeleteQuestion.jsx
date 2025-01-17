@@ -17,10 +17,9 @@ export const DeleteQuestion = ({ fetchQuestions }) => {
 			return;
 		}
 
-		// eslint-disable-next-line no-undef
-		const baseUrl = import.meta.env.VITE_BASE_URL || "/api";
+		const baseUrl = import.meta.env.VITE_BASE_URL;
 
-		const response = await fetch(`${baseUrl}`, {
+		const response = await fetch(`${baseUrl}/questions`, {
 			method: "DELETE",
 			headers: {
 				"Content-Type": "application/json",

@@ -98,13 +98,13 @@ const writeDataToFile = (questions) => {
 };
 
 // GET endpoint to fetch questions from db.json
-app.get("/api/questions", (req, res) => {
+app.get("/questions", (req, res) => {
     const questions = readDataFromFile();
     res.json(questions);
 });
 
 // POST endpoint to add a new question to db.json
-app.post("/api/questions", (req, res) => {
+app.post("/questions", (req, res) => {
     const newQuestion = req.body;
 
     if (
@@ -124,7 +124,7 @@ app.post("/api/questions", (req, res) => {
 });
 
 
-app.delete("/api/questions", (req, res) => {
+app.delete("/questions", (req, res) => {
     const index = parseInt(req.body.index, 10); // Pobieramy indeks z body
 
     if (isNaN(index)) {

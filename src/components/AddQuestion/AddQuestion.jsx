@@ -30,9 +30,8 @@ const AddQuestion = ({ fetchQuestions }) => {
 	const SaveQuestion = async () => {
 		if (questionText && answers.length >= 3) {
 			try {
-				// eslint-disable-next-line no-undef
-				const baseUrl = import.meta.env.VITE_BASE_URL || "/api";
-				const response = await fetch(`${baseUrl}`, {
+				const baseUrl = import.meta.env.VITE_BASE_URL;
+				const response = await fetch(`${baseUrl}/questions`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
