@@ -30,7 +30,9 @@ const AddQuestion = ({ fetchQuestions }) => {
 	const SaveQuestion = async () => {
 		if (questionText && answers.length >= 3) {
 			try {
-				const response = await fetch("http://localhost:5000/api/questions", {
+				// eslint-disable-next-line no-undef
+				const baseUrl = import.meta.env.VITE_BASE_URL || "/api";
+				const response = await fetch(`${baseUrl}`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
