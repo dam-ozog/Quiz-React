@@ -5,7 +5,9 @@ export const DownloadQuestions =  () => {
 
     const fetchQuestions = useCallback(async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/questions");
+            // eslint-disable-next-line no-undef
+            const baseUrl = process.env.REACT_APP_BASE_URL || "/api";
+            const response = await fetch(`${baseUrl}/questions`);
             const data = await response.json();
             setQuestions(data)
         } catch (error) {
