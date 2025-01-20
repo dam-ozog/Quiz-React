@@ -30,8 +30,8 @@ const AddQuestion = ({ fetchQuestions }) => {
 	const SaveQuestion = async () => {
 		if (questionText && answers.length >= 3) {
 			try {
-				const baseUrl = import.meta.env.VITE_BASE_URL;
-				const response = await fetch(`${baseUrl}/questions`, {
+				// const baseUrl = import.meta.env.VITE_BASE_URL;
+				const response = await fetch(`http://localhost:5000/questions`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",

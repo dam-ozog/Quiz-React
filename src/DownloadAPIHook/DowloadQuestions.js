@@ -5,8 +5,7 @@ export const DownloadQuestions =  () => {
 
     const fetchQuestions = useCallback(async () => {
         try {
-            const baseUrl = import.meta.env.VITE_BASE_URL || "/api";
-            const response = await fetch(`${baseUrl}/questions`);
+            const response = await fetch(`http://localhost:5000/questions`);
             const data = await response.json();
             setQuestions(data)
         } catch (error) {
