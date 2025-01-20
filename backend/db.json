@@ -53,23 +53,6 @@
         }
       ],
       "id": "78ee"
-    },
-    {
-      "question": "Ile dni ma rok?",
-      "answers": [
-        {
-          "answer": "365",
-          "value": true
-        },
-        {
-          "answer": "231",
-          "value": true
-        },
-        {
-          "answer": "360",
-          "value": false
-        }
-      ]
     }
   ]
 }

@@ -19,7 +19,7 @@ export const DeleteQuestion = ({ fetchQuestions }) => {
 
 		// const baseUrl = import.meta.env.VITE_BASE_URL;
 
-		const response = await fetch(`http:/localhost:5000/questions`, {
+		const response = await fetch(`http://localhost:5000/questions`, {
 			method: "DELETE",
 			headers: {
 				"Content-Type": "application/json",
